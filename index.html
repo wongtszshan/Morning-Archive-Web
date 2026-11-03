@@ -22,11 +22,20 @@ const esc=x=>String(x??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&
 const labels={global:"全球新闻早报",semiconductor:"美股半导体晨报",premarket:"美股盘前预警"};
 const safeUrl=x=>{try{const u=new URL(x);return /^https?:$/.test(u.protocol)?u.href:null}catch{return null}};
 function inline(s){
- let a=esc(s);
- a=a.replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,(_,label,url)=>{const u=safeUrl(url);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+label+'</a>':label});
+ const links=[];
+ let a=String(s).replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g,(_,label,url)=>{
+   const u=safeUrl(url);
+   if(!u)return label;
+   const key="ZZLINKPLACEHOLDER"+links.length+"ZZ";
+   links.push('<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(label)+'</a>');
+   return key;
+ });
+ a=esc(a);
+ a=a.replace(/https?:\/\/[^\s<>]+/g,url=>{
+   const u=safeUrl(url);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(url)+'</a>':url;
+ });
  a=a.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>").replace(/`([^`]+)`/g,"<code>$1</code>");
- a=a.replace(/https?:\/\/[^\s<>]+/g,url=>{if(url.includes("&quot;"))return url;const u=safeUrl(url);return u?'<a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(url)+'</a>':url});
- return a;
+ return a.replace(/ZZLINKPLACEHOLDER(\d+)ZZ/g,(_,n)=>links[Number(n)]||"");
 }
 function markdown(source){
  const lines=String(source||"").replace(/\r/g,"").split("\n");let out="",list=null,table=false,headers=[],headings=[];
@@ -40,7 +49,8 @@ function markdown(source){
    else out+="<tr>"+cells(line).map(c=>"<td>"+inline(c)+"</td>").join("")+"</tr>";
    continue;
   }
-  close();
+  const isList=/^(?:\\d+\\.\\s+|[-*]\\s+)/.test(line);
+  if(!isList)close();
   if(/^---+$/.test(line)){out+="<hr>";continue}
   const h=line.match(/^(#{1,4})\s+(.+)$/);
   if(h){const level=Math.min(3,h[1].length);const id="sec-"+headings.length;headings.push({id,title:h[2].replace(/\*\*/g,""),level});out+="<h"+level+' id="'+id+'">'+inline(h[2])+"</h"+level+">";continue}
