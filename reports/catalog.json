@@ -21,6 +21,16 @@
       "archive_status": "complete",
       "url": "reports/2026/11/2026-11-03-semiconductor.html",
       "updated_at": "2026-11-03-mobile-layout-v2"
+    },
+    {
+      "id": "2026-11-03-premarket",
+      "date": "2026-11-03",
+      "category": "premarket",
+      "title": "2026-11-03 美股半导体盘前预警｜AMD财报与AI芯片反弹",
+      "summary": "AMD今晚盘后财报、onsemi AI数据中心业务增长及半导体盘前反弹；报价时点限制明确标注。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-03-premarket.html",
+      "updated_at": "2026-11-03T22:11:38+08:00"
     }
   ]
 }
