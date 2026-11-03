@@ -14,7 +14,8 @@
 "use strict";
 // Security: Never put GitHub personal access tokens or private repository credentials here.
 // This public static app starts empty. Future private content must be served via an authenticated backend.
-const CONFIG={apiBase:""}; // Later: HTTPS Cloudflare Worker endpoint with user authentication.
+const CONFIG={apiBase:"https://morning-archive-api.wangtszshan.workers.dev"};
+let archivePassword=sessionStorage.getItem("morning_archive_password")||"";
 let reports=[],selected="all",query="";
 const root=document.getElementById("root");
 const escapeHtml=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -34,6 +35,19 @@ function home(){
 }
 function article(id){const r=reports.find(x=>x.id===id);if(!r){location.hash="#/";return}root.innerHTML='<div class="article"><button class="back" id="back">← 返回全部晨报</button><div class="eyebrow">'+escapeHtml(kindLabel(r.category))+'</div><h1>'+escapeHtml(r.title)+'</h1><div class="date">'+escapeHtml(r.date)+' · Asia/Singapore</div><div class="content">'+textContent(r.content)+'</div><div class="notice">请以报告内附的官方原始来源为准。新闻和市场信息可能发生后续变化。</div></div>';document.getElementById("back").onclick=()=>location.hash="#/"}
 function route(){const m=location.hash.match(/^#\/report\/(.+)$/);if(m){try{article(decodeURIComponent(m[1]))}catch{home()}}else home()}
-async function load(){if(!CONFIG.apiBase){route();return}try{const url=new URL("/reports",CONFIG.apiBase);const resp=await fetch(url,{credentials:"include",cache:"no-store"});if(!resp.ok)throw Error("status "+resp.status);const json=await resp.json();reports=Array.isArray(json)?json:(Array.isArray(json.reports)?json.reports:[]);reports=reports.filter(r=>r&&typeof r.id==="string"&&typeof r.date==="string"&&typeof r.title==="string"&&typeof r.content==="string");document.getElementById("status").textContent="已连接私人数据"}catch(e){document.getElementById("status").textContent="私人数据暂不可用";console.warn("Private archive unavailable",e)}route()}
+async function load(){if(!archivePassword){document.getElementById("status").textContent="私人档案未解锁";route();showLogin();return}try{const url=new URL("/reports",CONFIG.apiBase);const resp=await fetch(url,{headers:{"Authorization":"Bearer "+archivePassword},cache:"no-store"});if(!resp.ok)throw Error("status "+resp.status);const json=await resp.json();reports=Array.isArray(json)?json:(Array.isArray(json.reports)?json.reports:[]);reports=reports.filter(r=>r&&typeof r.id==="string"&&typeof r.date==="string"&&typeof r.title==="string"&&typeof r.content==="string");document.getElementById("status").textContent="已连接私人数据"}catch(e){document.getElementById("status").textContent="私人数据暂不可用";console.warn("Private archive unavailable",e)}route();if(!reports.length)showLogin()}
+function showLogin(){
+ if(document.querySelector("#login-panel"))return;
+ const panel=document.createElement("div");
+ panel.id="login-panel";panel.className="notice";panel.style.margin="16px 0";
+ panel.innerHTML='<strong>解锁私人晨报</strong><p>输入你为 Morning Archive 设置的阅读密码（不是 GitHub Token）。密码仅保存在当前浏览器标签页中。</p><form id="unlock-form" style="display:flex;gap:8px;flex-wrap:wrap"><input id="archive-pass" type="password" autocomplete="off" placeholder="阅读密码" required class="search"><button class="pill active" type="submit">连接私人档案</button></form><p id="login-error"></p>';
+ root.prepend(panel);
+ document.getElementById("unlock-form").onsubmit=async e=>{
+  e.preventDefault();
+  archivePassword=document.getElementById("archive-pass").value;
+  sessionStorage.setItem("morning_archive_password",archivePassword);
+  panel.remove();await load();
+ };
+}
 window.addEventListener("hashchange",route);load();
 </script></body></html>
