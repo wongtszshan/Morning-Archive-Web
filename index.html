@@ -2,20 +2,18 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f7f6f2"><meta name="description" content="Morning Archive — 私人晨报阅读空间">
+<meta name="theme-color" content="#f7f6f2"><meta name="description" content="Morning Archive — 每日新闻与市场晨报档案">
 <title>Morning Archive · 晨报档案</title>
 <style>
 :root{color-scheme:light;--bg:#f7f6f2;--panel:#fff;--ink:#222a32;--muted:#7c858e;--border:#e6e6e2;--accent:#295e70;--soft:#e8f1f2}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft Yahei",sans-serif}button,input{font:inherit}button{cursor:pointer}.app{max-width:1120px;padding:32px 22px;margin:auto}.header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:48px}.brand{display:flex;align-items:center;gap:12px;font-size:19px;font-weight:720;letter-spacing:-.5px}.logo{background:#263f4b;color:white;border-radius:14px;width:42px;height:42px;display:grid;place-items:center;font-family:Georgia,serif;font-size:26px}.tag{font-size:12px;color:var(--accent);background:var(--soft);padding:7px 11px;border-radius:99px}.hero{margin-bottom:32px}.eyebrow{font-size:12px;letter-spacing:2px;color:var(--accent);font-weight:700}.hero h1{font-family:Georgia,"Songti SC",serif;font-size:clamp(32px,5vw,52px);font-weight:500;letter-spacing:-1px;margin:14px 0}.hero p{color:var(--muted);line-height:1.8;margin:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px 0}.stat{background:var(--panel);border:1px solid var(--border);border-radius:18px;padding:20px}.stat strong{font-size:28px;display:block;font-weight:600}.stat span{font-size:12px;color:var(--muted)}.toolbar{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:25px 0}.search{background:#fff;border:1px solid var(--border);border-radius:12px;padding:12px 14px;min-width:240px;flex:1;color:var(--ink)}.pill{border:1px solid var(--border);background:#fff;color:#56606a;padding:11px 15px;border-radius:99px}.pill.active{background:#294e5a;color:white;border-color:#294e5a}.section-title{font-size:12px;letter-spacing:1.7px;font-weight:700;color:#8b949c;margin:32px 0 14px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.card{background:white;border:1px solid var(--border);border-radius:18px;padding:23px;text-align:left;min-height:170px;transition:transform .15s,border-color .15s;width:100%}.card:hover{transform:translateY(-2px);border-color:#a0b7bc}.card .meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}.card h3{font-size:20px;font-weight:600;margin:23px 0 10px}.card p{font-size:13px;color:var(--muted);line-height:1.7;margin:0}.empty{border:1px dashed #cdd4d5;padding:45px 22px;border-radius:18px;text-align:center;color:var(--muted);line-height:1.85;background:#fff}.empty strong{color:var(--ink);display:block;font-size:18px}.article{max-width:780px;margin:12px auto}.back{background:none;border:0;color:var(--accent);padding:12px 0}.article h1{font-size:clamp(28px,5vw,42px);margin:18px 0}.article .date{color:var(--muted);font-size:13px}.article .content{line-height:1.85;font-size:16px;margin:30px 0;white-space:pre-wrap;overflow-wrap:anywhere}.article a{color:var(--accent)}.notice{border-radius:12px;padding:14px 18px;background:#e9f1f2;color:#365c68;font-size:13px;line-height:1.7}.footer{margin:70px 0 20px;color:#a0a7a8;font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}@media(max-width:650px){.app{padding:22px 17px}.header{margin-bottom:34px}.stats{gap:8px}.stat{padding:15px}.stat strong{font-size:23px}.cards{grid-template-columns:1fr}.hero h1{font-size:36px}.toolbar{gap:8px}.search{flex-basis:100%}.pill{padding:9px 13px}}
 </style>
 </head>
-<body><main class="app"><header class="header"><div class="brand"><div class="logo">M</div><span>Morning Archive</span></div><span class="tag" id="status">未连接私人数据</span></header><div id="root"></div><footer><span>Morning Archive · Personal knowledge, daily.</span><span>Asia/Singapore · v0.1</span></footer></main>
+<body><main class="app"><header class="header"><div class="brand"><div class="logo">M</div><span>Morning Archive</span></div><span class="tag" id="status">正在读取档案</span></header><div id="root"></div><footer><span>Morning Archive · Personal knowledge, daily.</span><span>Asia/Singapore · v0.2</span></footer></main>
 <script>
 "use strict";
-// Security: Never put GitHub personal access tokens or private repository credentials here.
-// This public static app starts empty. Future private content must be served via an authenticated backend.
-const CONFIG={apiBase:"https://morning-archive-api.wangtszshan.workers.dev"};
-let archivePassword=sessionStorage.getItem("morning_archive_password")||"";
+// Public reports only. Never include GitHub credentials or private content in this site.
+const REPORTS_URL="./reports/index.json";
 let reports=[],selected="all",query="";
 const root=document.getElementById("root");
 const escapeHtml=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -28,26 +26,27 @@ function home(){
  '<div class="stats"><div class="stat"><strong>'+reports.length+'</strong><span>已归档报告</span></div><div class="stat"><strong>'+new Set(reports.map(r=>r.date)).size+'</strong><span>记录天数</span></div><div class="stat"><strong>'+reports.filter(r=>r.category==="semiconductor"||r.category==="premarket").length+'</strong><span>半导体报告</span></div></div>'+
  '<div class="toolbar"><input class="search" aria-label="搜索晨报" placeholder="搜索日期、标题和内容…" value="'+escapeHtml(query)+'">'+["all","global","semiconductor","premarket"].map(k=>'<button class="pill '+(selected===k?"active":"")+'" data-filter="'+k+'">'+(k==="all"?"全部":kindLabel(k))+'</button>').join("")+'</div>'+
  '<div class="section-title">ARCHIVE / 晨报档案</div>'+
- (shown.length?'<div class="cards">'+shown.map(r=>'<button class="card" data-id="'+escapeHtml(r.id)+'"><div class="meta"><span>'+escapeHtml(kindLabel(r.category))+'</span><span>'+escapeHtml(r.date)+'</span></div><h3>'+escapeHtml(r.title)+'</h3><p>'+escapeHtml(r.summary||"打开阅读完整晨报")+'</p></button>').join("")+'</div>':'<div class="empty"><strong>'+ (reports.length?"没有符合条件的晨报":"档案馆已经准备好")+'</strong>'+(reports.length?"试试其他关键词或分类。":"目前还没有连接私人晨报数据。<br>接入安全的数据服务后，这里会自动显示每天的报告。")+'</div>');
+ (shown.length?'<div class="cards">'+shown.map(r=>'<button class="card" data-id="'+escapeHtml(r.id)+'"><div class="meta"><span>'+escapeHtml(kindLabel(r.category))+'</span><span>'+escapeHtml(r.date)+'</span></div><h3>'+escapeHtml(r.title)+'</h3><p>'+escapeHtml(r.summary||"打开阅读完整晨报")+'</p></button>').join("")+'</div>':'<div class="empty"><strong>'+ (reports.length?"没有符合条件的晨报":"档案馆已经准备好")+'</strong>'+(reports.length?"试试其他关键词或分类。":"还没有发布的晨报。<br>晨报发布后会自动显示在这里。")+'</div>');
  root.querySelector(".search").addEventListener("input",e=>{query=e.target.value;const pos=e.target.selectionStart;home();const input=root.querySelector(".search");input.focus();input.setSelectionRange(pos,pos)});
  root.querySelectorAll("[data-filter]").forEach(b=>b.onclick=()=>{selected=b.dataset.filter;home()});
  root.querySelectorAll("[data-id]").forEach(b=>b.onclick=()=>{location.hash="#/report/"+encodeURIComponent(b.dataset.id)});
 }
 function article(id){const r=reports.find(x=>x.id===id);if(!r){location.hash="#/";return}root.innerHTML='<div class="article"><button class="back" id="back">← 返回全部晨报</button><div class="eyebrow">'+escapeHtml(kindLabel(r.category))+'</div><h1>'+escapeHtml(r.title)+'</h1><div class="date">'+escapeHtml(r.date)+' · Asia/Singapore</div><div class="content">'+textContent(r.content)+'</div><div class="notice">请以报告内附的官方原始来源为准。新闻和市场信息可能发生后续变化。</div></div>';document.getElementById("back").onclick=()=>location.hash="#/"}
 function route(){const m=location.hash.match(/^#\/report\/(.+)$/);if(m){try{article(decodeURIComponent(m[1]))}catch{home()}}else home()}
-async function load(){if(!archivePassword){document.getElementById("status").textContent="私人档案未解锁";route();showLogin();return}try{const url=new URL("/reports",CONFIG.apiBase);const resp=await fetch(url,{headers:{"Authorization":"Bearer "+archivePassword},cache:"no-store"});if(!resp.ok)throw Error("status "+resp.status);const json=await resp.json();reports=Array.isArray(json)?json:(Array.isArray(json.reports)?json.reports:[]);reports=reports.filter(r=>r&&typeof r.id==="string"&&typeof r.date==="string"&&typeof r.title==="string"&&typeof r.content==="string");document.getElementById("status").textContent="已连接私人数据"}catch(e){document.getElementById("status").textContent="私人数据暂不可用";console.warn("Private archive unavailable",e)}route();if(!reports.length)showLogin()}
-function showLogin(){
- if(document.querySelector("#login-panel"))return;
- const panel=document.createElement("div");
- panel.id="login-panel";panel.className="notice";panel.style.margin="16px 0";
- panel.innerHTML='<strong>解锁私人晨报</strong><p>输入你为 Morning Archive 设置的阅读密码（不是 GitHub Token）。密码仅保存在当前浏览器标签页中。</p><form id="unlock-form" style="display:flex;gap:8px;flex-wrap:wrap"><input id="archive-pass" type="password" autocomplete="off" placeholder="阅读密码" required class="search"><button class="pill active" type="submit">连接私人档案</button></form><p id="login-error"></p>';
- root.prepend(panel);
- document.getElementById("unlock-form").onsubmit=async e=>{
-  e.preventDefault();
-  archivePassword=document.getElementById("archive-pass").value;
-  sessionStorage.setItem("morning_archive_password",archivePassword);
-  panel.remove();await load();
- };
+async function load(){
+ try {
+  const response=await fetch(REPORTS_URL+"?v="+Date.now(),{cache:"no-store"});
+  if(!response.ok)throw new Error("HTTP "+response.status);
+  const json=await response.json();
+  const records=Array.isArray(json)?json:(Array.isArray(json.reports)?json.reports:[]);
+  reports=records.filter(r=>r&&typeof r.id==="string"&&typeof r.date==="string"&&typeof r.title==="string"&&typeof r.content==="string"&&["global","semiconductor","premarket"].includes(r.category));
+  document.getElementById("status").textContent="公开晨报档案";
+ } catch(e) {
+  console.warn("Unable to read report index",e);
+  document.getElementById("status").textContent="暂时无法加载";
+  reports=[];
+ }
+ route();
 }
 window.addEventListener("hashchange",route);load();
 </script></body></html>
