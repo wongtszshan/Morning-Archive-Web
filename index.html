@@ -22,7 +22,7 @@ function paint(){
  const rows=reports.filter(r=>(category==="all"||r.category===category)&&[r.title,r.summary,r.date].join(" ").toLowerCase().includes(term.toLowerCase()));
  cards.innerHTML=rows.length?rows.map(r=>{
  const semi=r.category!=="global";
- return '<a class="card" href="'+esc(r.url)+'"><div class="card-art '+(semi?"semi":"")+'">'+cardSVG(r.category)+'<span class="card-type">'+(semi?"SEMICONDUCTOR REPORT":"WORLD NEWS BRIEF")+'</span></div><div class="card-info"><div class="card-head"><span class="badge '+(semi?"semi":"")+'">'+esc(LABELS[r.category]||"晨报")+'</span><span>'+esc(r.date)+'</span></div><h3>'+esc(r.title)+'</h3><p>'+esc(r.summary||"查看当日完整内容")+'</p><div class="card-foot"><span>'+(r.archive_status==="excerpt"?"阅读归档节选":"阅读独立文章")+'</span><span>→</span></div></div></a>'
+ return '<a class="card" href="'+esc(r.url)+'?v='+encodeURIComponent(r.updated_at||"1")+'"><div class="card-art '+(semi?"semi":"")+'">'+cardSVG(r.category)+'<span class="card-type">'+(semi?"SEMICONDUCTOR REPORT":"WORLD NEWS BRIEF")+'</span></div><div class="card-info"><div class="card-head"><span class="badge '+(semi?"semi":"")+'">'+esc(LABELS[r.category]||"晨报")+'</span><span>'+esc(r.date)+'</span></div><h3>'+esc(r.title)+'</h3><p>'+esc(r.summary||"查看当日完整内容")+'</p><div class="card-foot"><span>'+(r.archive_status==="excerpt"?"阅读归档节选":"阅读独立文章")+'</span><span>→</span></div></div></a>'
  }).join(""):'<div class="empty">暂无符合条件的晨报。</div>';
 }
 document.getElementById("search").oninput=e=>{term=e.target.value;paint()};
