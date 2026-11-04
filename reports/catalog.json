@@ -3,6 +3,16 @@
   "updated_at": "2026-11-03",
   "reports": [
     {
+      "id": "2026-11-04-semiconductor",
+      "date": "2026-11-04",
+      "category": "semiconductor",
+      "title": "2026-11-04 美股半导体板块晨报｜AMD数据中心营收增长97%",
+      "summary": "AMD第三季度营收同比增长45%、数据中心业务增长97%，第四季度营收指引约170亿美元；关注MRVL/LITE并购风险及全球芯片股波动。13只证券收盘报价未完整核实。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-04-semiconductor.html",
+      "updated_at": "2026-11-04T08:28:13+08:00"
+    },
+    {
       "id": "2026-11-03-global",
       "date": "2026-11-03",
       "category": "global",
