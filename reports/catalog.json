@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-03",
+  "updated_at": "2026-11-04T22:00:00+08:00",
   "reports": [
+    {
+      "id": "2026-11-04-premarket",
+      "date": "2026-11-04",
+      "category": "premarket",
+      "title": "2026-11-04 美股半导体盘前预警｜AMD盘前上涨、Qualcomm与SpaceX合作",
+      "summary": "AMD Q3数据中心收入同比增长97%，Reuters盘前报道涨7.3%；高通SpaceX合作，今晚QCOM与ARM双财报；MRVL/LITE并购风险持续。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-04-premarket.html",
+      "updated_at": "2026-11-04T22:00:00+08:00"
+    },
     {
       "id": "2026-11-04-global",
       "date": "2026-11-04",
