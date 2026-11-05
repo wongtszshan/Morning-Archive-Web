@@ -3,6 +3,16 @@
   "updated_at": "2026-11-04T22:00:00+08:00",
   "reports": [
     {
+      "id": "2026-11-05-semiconductor",
+      "date": "2026-11-05",
+      "category": "semiconductor",
+      "title": "2026-11-05 美股半导体板块晨报｜高通、Arm财报与光通信并购观察",
+      "summary": "高通手机业务下滑、Arm数据中心授权增长；MRVL/LITE并购风险持续，行情数据缺口明确标注。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-05-semiconductor.html",
+      "updated_at": "2026-11-05T08:28:00+08:00"
+    },
+    {
       "id": "2026-11-04-premarket",
       "date": "2026-11-04",
       "category": "premarket",
