@@ -3,6 +3,16 @@
   "updated_at": "2026-11-04T22:00:00+08:00",
   "reports": [
     {
+      "id": "2026-11-05-global",
+      "date": "2026-11-05",
+      "category": "global",
+      "title": "2026-11-05 每日全球新闻早报｜美国中期选举与全球市场",
+      "summary": "民主党赢得美国国会两院；美股上涨但半导体走弱；中国节约战略；A股反弹与欧冠战报。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-05-global.html",
+      "updated_at": "2026-11-05T09:00:28+08:00"
+    },
+    {
       "id": "2026-11-05-semiconductor",
       "date": "2026-11-05",
       "category": "semiconductor",
