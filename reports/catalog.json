@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T08:25:37+08:00",
+  "updated_at": "2026-11-06T17:45:00+08:00",
   "reports": [
+    {
+      "id": "2026-11-06-premarket",
+      "date": "2026-11-06",
+      "category": "premarket",
+      "title": "2026-11-06 美股半导体盘前急报｜非农与超跌反弹概率推演",
+      "summary": "昨夜费半极端抛售，盘前期货回暖；非农21:30 SGT，反弹/震荡/续跌情景分别45%/30%/25%，关注MRVL/LITE并购。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-06-premarket.html",
+      "updated_at": "2026-11-06T17:45:00+08:00"
+    },
     {
       "id": "2026-11-06-global",
       "date": "2026-11-06",
