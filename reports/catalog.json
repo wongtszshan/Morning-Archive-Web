@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-05T21:57:00+08:00",
+  "updated_at": "2026-11-06T08:25:37+08:00",
   "reports": [
+    {
+      "id": "2026-11-06-semiconductor",
+      "date": "2026-11-06",
+      "category": "semiconductor",
+      "title": "2026-11-06 美股半导体板块晨报｜费半暴跌与AI数据中心监管风险",
+      "summary": "费半指数跌超12%，纳指跌5.52%；高通手机业务压力、MRVL/LITE并购估值波动；提供11只可核实证券收盘数据并说明缺口。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-06-semiconductor.html",
+      "updated_at": "2026-11-06T08:25:37+08:00"
+    },
     {
       "id": "2026-11-05-premarket",
       "date": "2026-11-05",
