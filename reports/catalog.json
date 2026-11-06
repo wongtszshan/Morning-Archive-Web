@@ -1,16 +1,16 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T18:00:00+08:00",
+  "updated_at": "2026-11-06T21:58:00+08:00",
   "reports": [
     {
       "id": "2026-11-06-premarket",
       "date": "2026-11-06",
       "category": "premarket",
-      "title": "2026-11-06 半导体盘前急报｜17:14 SGT同源行情快照与走势推演",
-      "summary": "Reuters美东04:14统一盘前快照：纳指100期货+1.48%、NVDA+3.6%、AMD/INTC/AVGO/MU+5%至+8.3%，随后分析非农与市场情景。",
+      "title": "2026-11-06 美股半导体盘前预警｜非农后芯片反弹与风险",
+      "summary": "08:31 EST Reuters纳指100期货+1.37%；10月非农16.5万人超预期，芯片盘前反弹但13只个股统一报价未核实；MRVL/LITE并购跟踪。",
       "archive_status": "complete",
       "url": "reports/2026/11/2026-11-06-premarket.html",
-      "updated_at": "2026-11-06T18:00:00+08:00"
+      "updated_at": "2026-11-06T21:58:00+08:00"
     },
     {
       "id": "2026-11-06-global",
