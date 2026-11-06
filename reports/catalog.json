@@ -3,6 +3,16 @@
   "updated_at": "2026-11-06T08:25:37+08:00",
   "reports": [
     {
+      "id": "2026-11-06-global",
+      "date": "2026-11-06",
+      "category": "global",
+      "title": "2026-11-06 每日全球新闻早报",
+      "summary": "美股AI板块重挫、英国央行加息、霍尔木兹海峡紧张局势、进博会与大模型动态。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-06-global.html",
+      "updated_at": "2026-11-06T08:56:22+08:00"
+    },
+    {
       "id": "2026-11-06-semiconductor",
       "date": "2026-11-06",
       "category": "semiconductor",
