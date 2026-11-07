@@ -3,6 +3,16 @@
   "updated_at": "2026-11-06T21:58:00+08:00",
   "reports": [
     {
+      "id": "2026-11-07-global",
+      "date": "2026-11-07",
+      "category": "global",
+      "title": "2026-11-07 每日全球新闻早报",
+      "summary": "美国就业超预期、美股科技反弹、美伊谈判及OpenAI融资报道",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-07-global.html",
+      "updated_at": "2026-11-07T08:56:24+08:00"
+    },
+    {
       "id": "2026-11-06-premarket",
       "date": "2026-11-06",
       "category": "premarket",
