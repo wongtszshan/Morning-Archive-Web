@@ -121,6 +121,16 @@
       "archive_status": "complete",
       "url": "reports/2026/11/2026-11-03-premarket.html",
       "updated_at": "2026-11-03T22:11:38+08:00"
+    },
+    {
+      "id": "2026-11-07-semiconductor",
+      "date": "2026-11-07",
+      "category": "semiconductor",
+      "title": "2026-11-07 美股半导体板块晨报｜芯片反弹与就业数据",
+      "summary": "费半反弹4.2%，AMD上涨11.04%；13只关注股票收盘行情及MRVL/LITE并购风险核查。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-07-semiconductor.html",
+      "updated_at": "2026-11-07T08:28:32+08:00"
     }
   ]
 }
