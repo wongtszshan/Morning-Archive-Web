@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-06T21:58:00+08:00",
+  "updated_at": "2026-11-08T09:00:00+08:00",
   "reports": [
+    {
+      "id": "2026-11-08-global",
+      "date": "2026-11-08",
+      "category": "global",
+      "title": "2026-11-08 每日全球新闻早报｜俄乌空袭、新西兰大选、美伊局势",
+      "summary": "俄军空袭基辅能源设施；新西兰大选结果待定；美国扩大对伊朗陆路贸易限制。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-08-global.html",
+      "updated_at": "2026-11-08T09:00:00+08:00"
+    },
     {
       "id": "2026-11-07-global",
       "date": "2026-11-07",
