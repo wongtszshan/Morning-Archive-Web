@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-09T22:24:35+08:00",
+  "updated_at": "2026-11-10T08:30:28+08:00",
   "reports": [
+    {
+      "id": "2026-11-10-semiconductor",
+      "date": "2026-11-10",
+      "category": "semiconductor",
+      "title": "2026-11-10 美股半导体板块晨报｜芯片普涨、英伟达逆势下跌与日本JSR收购",
+      "summary": "AMD上涨13.33%，NVDA逆势下跌；日本三井化学拟收购JSR；MRVL/LITE并购进展与13只标的收盘行情。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-10-semiconductor.html",
+      "updated_at": "2026-11-10T08:30:28+08:00"
+    },
     {
       "id": "2026-11-09-premarket",
       "date": "2026-11-09",
