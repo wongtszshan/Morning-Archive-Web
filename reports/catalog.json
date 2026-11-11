@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-10T21:57:22+08:00",
+  "updated_at": "2026-11-11T08:25:39+08:00",
   "reports": [
+    {
+      "id": "2026-11-11-semiconductor",
+      "date": "2026-11-11",
+      "category": "semiconductor",
+      "title": "2026-11-11 美股半导体板块晨报｜CPI超预期、台积电投资AI、英伟达再跌",
+      "summary": "美国CPI超预期压制科技股；台积电批准对OpenAI和Anthropic最高10亿美元投资；NVDA跌5.47%，13只关注证券常规收盘行情。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-11-semiconductor.html",
+      "updated_at": "2026-11-11T08:25:39+08:00"
+    },
     {
       "id": "2026-11-10-premarket",
       "date": "2026-11-10",
