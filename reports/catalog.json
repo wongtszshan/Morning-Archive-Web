@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-11T22:00:00+08:00",
+  "updated_at": "2026-11-12T08:28:07+08:00",
   "reports": [
+    {
+      "id": "2026-11-12-semiconductor",
+      "date": "2026-11-12",
+      "category": "semiconductor",
+      "title": "2026-11-12 美股半导体板块晨报｜CoreWeave反弹、英伟达盘后急跌、MRVL/LITE上涨",
+      "summary": "CoreWeave业绩提振AI股，NVDA常规涨2.87%但盘后跌7.83%；MRVL和LITE上涨；13只标的收盘与盘后快照。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-12-semiconductor.html",
+      "updated_at": "2026-11-12T08:28:07+08:00"
+    },
     {
       "id": "2026-11-11-premarket",
       "date": "2026-11-11",
