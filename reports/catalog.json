@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T01:00:04.396Z",
+  "updated_at": "2026-11-12T21:58:14+08:00",
   "reports": [
+    {
+      "id": "2026-11-12-premarket",
+      "date": "2026-11-12",
+      "category": "premarket",
+      "title": "2026-11-12 美股半导体盘前预警｜NVDA盘前下跌与AMAT财报",
+      "summary": "NVDA盘前约跌7.7%–7.8%；Nebius交付延期、鸿海AI服务器展望与AMAT盘后财报。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-12-premarket.html",
+      "updated_at": "2026-11-12T21:58:14+08:00"
+    },
     {
       "id": "2026-11-12-global",
       "date": "2026-11-12",
