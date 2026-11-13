@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-12T21:58:14+08:00",
+  "updated_at": "2026-11-13T08:30:00+08:00",
   "reports": [
+    {
+      "id": "2026-11-13-semiconductor",
+      "date": "2026-11-13",
+      "category": "semiconductor",
+      "title": "2026-11-13 美股半导体板块晨报｜英伟达CEO更迭、AMAT财报、AMD量子合作",
+      "summary": "NVDA CEO辞任、AMD与AVGO收涨逾5%；AMAT财报强劲，AMD与PsiQuantum扩大合作；13只标的收盘行情。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-13-semiconductor.html",
+      "updated_at": "2026-11-13T08:30:00+08:00"
+    },
     {
       "id": "2026-11-12-premarket",
       "date": "2026-11-12",
