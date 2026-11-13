@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-13T09:00:00+08:00",
+  "updated_at": "2026-11-13T22:03:28+08:00",
   "reports": [
+    {
+      "id": "2026-11-13-premarket",
+      "date": "2026-11-13",
+      "category": "premarket",
+      "title": "2026-11-13 美股半导体盘前预警｜Cerebras业绩与NVDA管理层风险",
+      "summary": "Cerebras财报后盘前涨逾14%，Reuters报道NVDA盘前反弹约2.6%；AMAT财报、出口管制及MRVL/LITE跟踪，13只统一报价未核实。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-13-premarket.html",
+      "updated_at": "2026-11-13T22:03:28+08:00"
+    },
     {
       "id": "2026-11-13-global",
       "date": "2026-11-13",
