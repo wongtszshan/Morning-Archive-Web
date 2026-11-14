@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T08:33:43+08:00",
+  "updated_at": "2026-11-14T00:59:49.603Z",
   "reports": [
+    {
+      "id": "2026-11-14-global",
+      "date": "2026-11-14",
+      "category": "global",
+      "title": "2026-11-14 每日全球新闻早报",
+      "summary": "微软365全球故障恢复、美股半导体下跌、西太平洋演训披露、俄乌能源与A股收盘。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-14-global.html",
+      "updated_at": "2026-11-14T00:59:49.603Z"
+    },
     {
       "id": "2026-11-14-semiconductor",
       "date": "2026-11-14",
