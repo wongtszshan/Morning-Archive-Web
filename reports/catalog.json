@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-13T22:03:28+08:00",
+  "updated_at": "2026-11-14T08:33:43+08:00",
   "reports": [
+    {
+      "id": "2026-11-14-semiconductor",
+      "date": "2026-11-14",
+      "category": "semiconductor",
+      "title": "2026-11-14 美股半导体板块晨报｜英伟达领导层余波与AI芯片下跌",
+      "summary": "英伟达管理层风险延续、Cerebras业绩超预期、MRVL发布连接技术公告；严格区分已核实收盘与盘中快照。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-14-semiconductor.html",
+      "updated_at": "2026-11-14T08:33:43+08:00"
+    },
     {
       "id": "2026-11-13-premarket",
       "date": "2026-11-13",
