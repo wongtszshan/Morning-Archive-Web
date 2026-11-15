@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-14T00:59:49.603Z",
+  "updated_at": "2026-11-15T01:01:51Z",
   "reports": [
+    {
+      "id": "2026-11-15-global",
+      "date": "2026-11-15",
+      "category": "global",
+      "title": "2026-11-15 每日全球新闻早报",
+      "summary": "中美俄拟议会晤、美国空管故障后续、俄乌谈判、东盟缅甸政策与印度网络封禁调查。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-15-global.html",
+      "updated_at": "2026-11-15T01:01:51Z"
+    },
     {
       "id": "2026-11-14-global",
       "date": "2026-11-14",
