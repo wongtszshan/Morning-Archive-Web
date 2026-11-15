@@ -1,0 +1,54 @@
+name: Morning Archive maintenance
+on:
+  schedule:
+    - cron: "15 1 1 * *"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "cleanup, delete selected reports, protect or unprotect"
+        required: true
+        type: choice
+        default: cleanup
+        options: [cleanup, delete, protect, unprotect]
+      report_ids:
+        description: "Comma-separated report IDs for manual operations"
+        required: false
+        type: string
+      apply:
+        description: "Apply changes? Leave unchecked to preview only."
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: write
+concurrency:
+  group: morning-archive-maintenance
+  cancel-in-progress: false
+jobs:
+  maintain:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Maintain reports
+        env:
+          MODE: ${{ github.event_name == 'schedule' && 'cleanup' || inputs.mode }}
+          IDS: ${{ inputs.report_ids }}
+          APPLY: ${{ github.event_name == 'schedule' && 'true' || inputs.apply }}
+        run: |
+          if [ "$APPLY" = "true" ]; then
+            python scripts/manage_reports.py --mode "$MODE" --ids "$IDS" --apply
+          else
+            python scripts/manage_reports.py --mode "$MODE" --ids "$IDS"
+          fi
+      - name: Commit updates
+        if: ${{ github.event_name == 'schedule' || inputs.apply }}
+        run: |
+          git add -A -- reports/
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore: maintain Morning Archive reports"
+          git push
