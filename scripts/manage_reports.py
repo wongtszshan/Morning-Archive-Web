@@ -18,7 +18,7 @@ def run():
  entries=cat["reports"]; known={}
  for item in entries:
   rid=item.get("id",""); url=item.get("url",""); category=item.get("category",""); date=item.get("date","")
-  m=re.fullmatch(r"reports/(\\d{4})/(\\d{2})/(\\d{4}-\\d{2}-\\d{2})-(global|semiconductor|premarket)\\.html",url)
+  m=re.fullmatch(r"reports/(\d{4})/(\d{2})/(\d{4}-\d{2}-\d{2})-(global|semiconductor|premarket)\.html",url)
   if not m or rid!=date+"-"+category or m.group(3)!=date or m.group(4)!=category or rid in known: raise ValueError("Invalid report metadata "+rid)
   day=dt.date.fromisoformat(date)
   if m.group(1)!=str(day.year) or m.group(2)!=f"{day.month:02d}": raise ValueError("Invalid month "+rid)
@@ -27,8 +27,8 @@ def run():
   known[rid]=(item,day,file)
  pins=read(PIN,{"ids":[]})
  protected=set(pins["ids"])
- if any(not re.fullmatch(r"\\d{4}-\\d{2}-\\d{2}-(global|semiconductor|premarket)",x) for x in protected): raise ValueError("Invalid protected IDs")
- ids=set(filter(None,re.split(r"[,;\\s]+",a.ids.strip())))
+ if any(not re.fullmatch(r"\d{4}-\d{2}-\d{2}-(global|semiconductor|premarket)",x) for x in protected): raise ValueError("Invalid protected IDs")
+ ids=set(filter(None,re.split(r"[,;\s]+",a.ids.strip())))
  if a.mode!="cleanup" and (not ids or ids-known.keys()): raise ValueError("Unknown/missing IDs "+str(sorted(ids-known.keys())))
  today=dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).date()
  selected=[]
