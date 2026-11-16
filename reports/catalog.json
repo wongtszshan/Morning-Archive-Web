@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-16T01:00:00+08:00",
+  "updated_at": "2026-11-16T15:03:21.940Z",
   "reports": [
+    {
+      "id": "2026-11-16-premarket",
+      "date": "2026-11-16",
+      "category": "premarket",
+      "title": "2026-11-16 美股半导体盘前预警｜补传重建版",
+      "summary": "AI半导体盘前承压、NVIDIA管理层及11月17日财报、SK海力士供应链投资和MRVL/LITE并购观察；包含历史媒体快照与来源核查限制。",
+      "archive_status": "complete",
+      "url": "reports/2026/11/2026-11-16-premarket.html",
+      "updated_at": "2026-11-16T15:03:21.940Z"
+    },
     {
       "id": "2026-11-16-global",
       "date": "2026-11-16",
