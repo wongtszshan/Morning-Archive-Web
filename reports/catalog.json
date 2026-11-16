@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-15T01:01:51Z",
+  "updated_at": "2026-11-16T01:00:00+08:00",
   "reports": [
+    {
+      "id": "2026-11-16-global",
+      "date": "2026-11-16",
+      "category": "global",
+      "title": "2026-11-16 每日全球新闻早报",
+      "summary": "巴林遭伊朗无人机袭击、东盟缅甸政策、南海准则谈判、美国航空故障及中国—东盟峰会。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-16-global.html",
+      "updated_at": "2026-11-16T01:00:00+08:00"
+    },
     {
       "id": "2026-11-15-global",
       "date": "2026-11-15",
