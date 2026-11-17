@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T00:28:48.143Z",
+  "updated_at": "2026-11-17T00:58:33.034Z",
   "reports": [
+    {
+      "id": "2026-11-17-global",
+      "date": "2026-11-17",
+      "category": "global",
+      "title": "2026-11-17 每日全球新闻早报",
+      "summary": "中俄美元首会晤安排、美国AI芯片出口新规、全球科技股下跌、俄乌局势及A股收盘。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-17-global.html",
+      "updated_at": "2026-11-17T00:58:33.034Z"
+    },
     {
       "id": "2026-11-17-semiconductor",
       "date": "2026-11-17",
