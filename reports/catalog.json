@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T00:58:33.034Z",
+  "updated_at": "2026-11-17T14:02:00.911Z",
   "reports": [
+    {
+      "id": "2026-11-17-premarket",
+      "date": "2026-11-17",
+      "category": "premarket",
+      "title": "2026-11-17 美股半导体盘前预警｜出口管制、LITE反弹与NVDA财报",
+      "summary": "11月17日盘前LITE媒体快照约涨8.2%，美国AI芯片出口限制、NVDA今晚财报、MRVL/LITE交易进展与报价核查限制。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-17-premarket.html",
+      "updated_at": "2026-11-17T14:02:00.911Z"
+    },
     {
       "id": "2026-11-17-global",
       "date": "2026-11-17",
