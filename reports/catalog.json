@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-17T14:02:00.911Z",
+  "updated_at": "2026-11-18T00:33:05Z",
   "reports": [
+    {
+      "id": "2026-11-18-semiconductor",
+      "date": "2026-11-18",
+      "category": "semiconductor",
+      "title": "2026-11-18 美股半导体板块晨报｜NVIDIA财报、治理风险与出口限制",
+      "summary": "NVIDIA季度营收1158亿美元同比增长103%；治理调查报道、半导体估值与设备出口争议，行情部分核实。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-18-semiconductor.html",
+      "updated_at": "2026-11-18T00:33:05Z"
+    },
     {
       "id": "2026-11-17-premarket",
       "date": "2026-11-17",
