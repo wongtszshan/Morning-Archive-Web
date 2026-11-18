@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T00:57:45Z",
+  "updated_at": "2026-11-18T13:58:31Z",
   "reports": [
+    {
+      "id": "2026-11-18-premarket",
+      "date": "2026-11-18",
+      "category": "premarket",
+      "title": "2026-11-18 美股半导体盘前预警｜NVDA强劲指引与光互连反弹",
+      "summary": "NVDA Q3营收1158亿美元、Q4指引1300亿美元±3%；COHR盘前媒体快照+6.3%，出口管制及MRVL/LITE并购风险观察。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-18-premarket.html",
+      "updated_at": "2026-11-18T13:58:31Z"
+    },
     {
       "id": "2026-11-18-global",
       "date": "2026-11-18",
