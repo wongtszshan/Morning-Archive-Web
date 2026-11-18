@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T00:33:05Z",
+  "updated_at": "2026-11-18T00:57:45Z",
   "reports": [
+    {
+      "id": "2026-11-18-global",
+      "date": "2026-11-18",
+      "category": "global",
+      "title": "2026-11-18 每日全球新闻早报",
+      "summary": "美伊交火、深圳APEC外交、英伟达财报、AI投资风险与A股11月17日收盘。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-18-global.html",
+      "updated_at": "2026-11-18T00:57:45Z"
+    },
     {
       "id": "2026-11-18-semiconductor",
       "date": "2026-11-18",
