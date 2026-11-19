@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T00:29:16Z",
+  "updated_at": "2026-11-19T00:57:41Z",
   "reports": [
+    {
+      "id": "2026-11-19-global",
+      "date": "2026-11-19",
+      "category": "global",
+      "title": "2026-11-19 每日全球新闻早报",
+      "summary": "深圳APEC、Java4Shell安全警报、英伟达对华芯片交付、微软AI交易审查与A股收盘",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-19-global.html",
+      "updated_at": "2026-11-19T00:57:41Z"
+    },
     {
       "id": "2026-11-19-semiconductor",
       "date": "2026-11-19",
