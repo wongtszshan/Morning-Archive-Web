@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T00:57:41Z",
+  "updated_at": "2026-11-19T14:01:18Z",
   "reports": [
+    {
+      "id": "2026-11-19-premarket",
+      "date": "2026-11-19",
+      "category": "premarket",
+      "title": "2026-11-19 美股半导体盘前预警｜AI IPO与光通信盘前观察",
+      "summary": "Reuters报道Anthropic IPO带动AI板块期货反弹；LITE等盘前中文快照触及阈值但缺独立价格验证，保留核查限制。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-19-premarket.html",
+      "updated_at": "2026-11-19T14:01:18Z"
+    },
     {
       "id": "2026-11-19-global",
       "date": "2026-11-19",
