@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-18T13:58:31Z",
+  "updated_at": "2026-11-19T00:29:16Z",
   "reports": [
+    {
+      "id": "2026-11-19-semiconductor",
+      "date": "2026-11-19",
+      "category": "semiconductor",
+      "title": "2026-11-19 美股半导体板块晨报｜NVDA财报后下跌、AMD逆势上涨",
+      "summary": "NVDA财报强劲但股价跌2.89%；AMD上涨5.31%；MRVL/LITE并购跟踪，5只股票收盘核实。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-19-semiconductor.html",
+      "updated_at": "2026-11-19T00:29:16Z"
+    },
     {
       "id": "2026-11-18-premarket",
       "date": "2026-11-18",
