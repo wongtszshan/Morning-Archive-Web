@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T00:55:47.252Z",
+  "updated_at": "2026-11-20T14:01:14.089Z",
   "reports": [
+    {
+      "id": "2026-11-20-premarket",
+      "date": "2026-11-20",
+      "category": "premarket",
+      "title": "2026-11-20 美股半导体盘前预警｜AI股承压与出口政策观察",
+      "summary": "Reuters报道AI科技股盘前继续走弱；LITE等中文报价达到观察阈值但缺独立核验；关注出口许可披露及AI估值风险。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-20-premarket.html",
+      "updated_at": "2026-11-20T14:01:14.089Z"
+    },
     {
       "id": "2026-11-20-global",
       "date": "2026-11-20",
