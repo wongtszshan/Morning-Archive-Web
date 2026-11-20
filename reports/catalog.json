@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-19T14:01:18Z",
+  "updated_at": "2026-11-20T00:30:25Z",
   "reports": [
+    {
+      "id": "2026-11-20-semiconductor",
+      "date": "2026-11-20",
+      "category": "semiconductor",
+      "title": "2026-11-20 美股半导体板块晨报｜BIS新规、AMD下跌与AI股承压",
+      "summary": "美国BIS先进芯片出口新规生效，TSMC收紧部分中国客户代工；AMD做空争议与Anthropic上市，13只标的收盘概览。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-20-semiconductor.html",
+      "updated_at": "2026-11-20T00:30:25Z"
+    },
     {
       "id": "2026-11-19-premarket",
       "date": "2026-11-19",
