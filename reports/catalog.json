@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21T00:25:44Z",
+  "updated_at": "2026-11-21T01:00:24Z",
   "reports": [
+    {
+      "id": "2026-11-21-global",
+      "date": "2026-11-21",
+      "category": "global",
+      "title": "2026-11-21 每日全球新闻早报",
+      "summary": "美股科技股重挫、美国敦促新马伊朗制裁合规、中印尼南海合作、军事AI原则、SpaceX GPU融资及A股普跌。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-21-global.html",
+      "updated_at": "2026-11-21T01:00:24Z"
+    },
     {
       "id": "2026-11-21-semiconductor",
       "date": "2026-11-21",
