@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-20T14:01:14.089Z",
+  "updated_at": "2026-11-21T00:25:44Z",
   "reports": [
+    {
+      "id": "2026-11-21-semiconductor",
+      "date": "2026-11-21",
+      "category": "semiconductor",
+      "title": "2026-11-21 美股半导体板块晨报｜芯片股重挫、Nvidia下跌与AMD争议",
+      "summary": "11月20日芯片板块急跌约10.7%，NVDA跌约13.8%；AMD争议延续；部分收盘价待核验。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-21-semiconductor.html",
+      "updated_at": "2026-11-21T00:25:44Z"
+    },
     {
       "id": "2026-11-20-premarket",
       "date": "2026-11-20",
