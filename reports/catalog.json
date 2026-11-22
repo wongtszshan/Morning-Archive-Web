@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-21T01:00:24Z",
+  "updated_at": "2026-11-22T00:58:00Z",
   "reports": [
+    {
+      "id": "2026-11-22-global",
+      "date": "2026-11-22",
+      "category": "global",
+      "title": "2026-11-22 每日全球新闻早报",
+      "summary": "COP31最终磋商、霍尔木兹海峡油轮遇袭、加沙援助车辆遭袭、亚投行香港办公室协定。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-22-global.html",
+      "updated_at": "2026-11-22T00:58:00Z"
+    },
     {
       "id": "2026-11-21-global",
       "date": "2026-11-21",
