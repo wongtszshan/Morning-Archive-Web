@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-22T00:58:00Z",
+  "updated_at": "2026-11-23T01:04:37.831Z",
   "reports": [
+    {
+      "id": "2026-11-23-global",
+      "date": "2026-11-23",
+      "category": "global",
+      "title": "2026-11-23 每日全球新闻早报",
+      "summary": "COP31未通过总体政治决定；沪深北融资保证金下限降至80%；OpenAI科学家提出AI能力阈值。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-23-global.html",
+      "updated_at": "2026-11-23T01:04:37.831Z"
+    },
     {
       "id": "2026-11-22-global",
       "date": "2026-11-22",
