@@ -1,7 +1,17 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-23T01:04:37.831Z",
+  "updated_at": "2026-11-23T14:02:31Z",
   "reports": [
+    {
+      "id": "2026-11-23-premarket",
+      "date": "2026-11-23",
+      "category": "premarket",
+      "title": "2026-11-23 美股半导体盘前预警｜AI芯片反弹与风险观察",
+      "summary": "AI芯片周一盘前反弹，NVDA与MRVL媒体报价超过4%；台湾融资规则调整，关注AI估值及本周硬件财报。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-23-premarket.html",
+      "updated_at": "2026-11-23T14:02:31Z"
+    },
     {
       "id": "2026-11-23-global",
       "date": "2026-11-23",
