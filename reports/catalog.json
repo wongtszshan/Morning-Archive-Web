@@ -1,7 +1,27 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-23T14:02:31Z",
+  "updated_at": "2026-11-24T01:47:00Z",
   "reports": [
+    {
+      "id": "2026-11-24-global",
+      "date": "2026-11-24",
+      "category": "global",
+      "title": "2026-11-24 每日全球新闻早报（补建部分版）",
+      "summary": "黄仁勋复职、美股反弹、新加坡GDP及国际宏观动态；部分栏目待核验。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-24-global.html",
+      "updated_at": "2026-11-24T01:47:00Z"
+    },
+    {
+      "id": "2026-11-24-semiconductor",
+      "date": "2026-11-24",
+      "category": "semiconductor",
+      "title": "2026-11-24 美股半导体板块晨报（补建部分版）",
+      "summary": "黄仁勋复职，费城半导体指数约涨14%；个股和盘后行情仍有缺口。",
+      "archive_status": "partial",
+      "url": "reports/2026/11/2026-11-24-semiconductor.html",
+      "updated_at": "2026-11-24T01:47:00Z"
+    },
     {
       "id": "2026-11-23-premarket",
       "date": "2026-11-23",
