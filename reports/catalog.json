@@ -1,26 +1,26 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-11-25T01:53:30.741Z",
+  "updated_at": "2026-11-25T02:01:05.520Z",
   "reports": [
     {
       "id": "2026-11-25-semiconductor",
       "date": "2026-11-25",
       "category": "semiconductor",
-      "title": "2026-11-25 美股半导体板块晨报（补建部分版）",
-      "summary": "费半跌7.88%，13只收盘行情全部取得；盘后及部分事件核查仍有缺口。",
-      "archive_status": "partial",
+      "title": "2026-11-25 美股半导体板块晨报（重制版）",
+      "summary": "费半跌7.88%；13只收盘及13只盘后报价，重点新闻、个股异动、并购价差与政策风险。",
+      "archive_status": "complete",
       "url": "reports/2026/11/2026-11-25-semiconductor.html",
-      "updated_at": "2026-11-25T01:53:27.030Z"
+      "updated_at": "2026-11-25T02:01:01.451Z"
     },
     {
       "id": "2026-11-25-global",
       "date": "2026-11-25",
       "category": "global",
-      "title": "2026-11-25 每日全球新闻早报（补建部分版）",
-      "summary": "数字经济十五五计划、关税风险、国际局势及A股收盘；部分栏目待核查。",
+      "title": "2026-11-25 每日全球新闻早报（重制版）",
+      "summary": "神舟二十四号、数字经济、国际外交、AI、A股、体育及小米财报；娱乐人物新闻未取得可靠材料。",
       "archive_status": "partial",
       "url": "reports/2026/11/2026-11-25-global.html",
-      "updated_at": "2026-11-25T01:53:30.065Z"
+      "updated_at": "2026-11-25T02:01:05.055Z"
     },
     {
       "id": "2026-11-24-global",
